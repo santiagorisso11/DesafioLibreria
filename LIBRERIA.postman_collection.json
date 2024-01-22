@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "25c942ab-a0f6-4cfa-9f29-526ff6254cc0",
+		"name": "LIBRERIA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32351083"
+	},
+	"item": [
+		{
+			"name": "Libros",
+			"item": [
+				{
+					"name": "Mostrar Libros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/libros",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar Libros por filtro",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoriaLiteraria\":\"Ficción literaria\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/libros/filtrar",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libros",
+								"filtrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Libro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"El Aleph\",\r\n    \"categoriaLiteraria\":\"Ficción literaria\",\r\n    \"precio\":12000,\r\n    \"fechaLanzamiento\":\"14/05/24\",\r\n    \"descripcion\":\"Libro de tapa dura\",\r\n    \"nombreAutor\":\"Jorge\",\r\n    \"apellidoAutor\":\"Borges\",\r\n    \"nombreEditorial\": \"Kapelusz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/libros",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libros"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Libro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"precio\":3000,\r\n    \"fechaLanzamiento\":\"18/09/18\",\r\n    \"descripcion\":\"Libro de tapa blanda\",\r\n    \"nombreAutor\":\"Matin\",\r\n    \"apellidoAutor\":\"Gimenez\",\r\n    \"nombreEditorial\":\"Jorge Luis\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/libros/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Libro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/libros/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"libros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autor",
+			"item": [
+				{
+					"name": "Mostrar Autores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/autores",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Autor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Jose\",\r\n        \"apellido\": \"Hernandez\",\r\n        \"dni\": \"345567\",\r\n        \"nacionalidad\": \"Argentino\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/autores",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Autor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Santiago\",\r\n        \"apellido\": \"risso\",\r\n        \"dni\": \"1231232223232\",\r\n        \"nacionalidad\": \"Argentino\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/autores/123123",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"autores",
+								"123123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Autor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/autores/123123",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"autores",
+								"123123"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Editorial",
+			"item": [
+				{
+					"name": "Mostrar Editoriales",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/editoriales",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"editoriales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Editorial",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \" Kapelusz\",\r\n        \"direccion\": \"Av. Leandro N. Alem 720\",\r\n        \"cuit\": \"23456834251\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/editoriales",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"editoriales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Ediutorial",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \r\n        \"cuit\": \"1123232123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/editoriales/29",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"editoriales",
+								"29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Autor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/editoriales/29",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"editoriales",
+								"29"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
